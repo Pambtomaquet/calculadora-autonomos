@@ -1,0 +1,1694 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Autónomos España 2025 | Cuota, IRPF y Neto Real</title>
+  <meta name="description" content="Calcula tu cuota de autónomo, retención de IRPF, IVA y el neto real que cobras cada mes. Herramienta gratuita y actualizada con las tarifas de 2025 en España." />
+  <meta name="keywords" content="calculadora autónomos, cuota autónomos 2025, IRPF autónomos, neto autónomos España, cotización autónomos, precio hora freelance" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Calculadora Autónomos España" />
+  <meta name="theme-color" content="#0b0d12" />
+  <link rel="canonical" href="https://calculadora-autonomos.es/" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Calculadora Autónomos España 2025" />
+  <meta property="og:description" content="Calcula tu cuota, IRPF, IVA y neto real mensual como autónomo en España." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon inline SVG -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>" />
+
+  <!-- Preconnect + fonts (correcto: link, no @import) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora Autónomos España 2025",
+    "applicationCategory": "FinanceApplication",
+    "description": "Calcula tu cuota de autónomo, IRPF, IVA y el neto real mensual en España.",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" }
+  }
+  </script>
+
+  <style>
+    /* ═══════════════════════════════════════════
+       TOKENS — DARK MODE (default)
+    ═══════════════════════════════════════════ */
+    :root {
+      --bg:          #0b0d12;
+      --bg2:         #0f1117;
+      --surface:     #13161e;
+      --card:        #181c27;
+      --card2:       #1e2334;
+      --border:      #242b3d;
+      --border2:     #2e3650;
+      --accent:      #f0c040;
+      --accent-dim:  rgba(240,192,64,.12);
+      --accent-glow: rgba(240,192,64,.22);
+      --blue:        #4f8ef7;
+      --blue-dim:    rgba(79,142,247,.12);
+      --green:       #3ecf8e;
+      --green-dim:   rgba(62,207,142,.1);
+      --red:         #f2505a;
+      --red-dim:     rgba(242,80,90,.1);
+      --orange:      #f97316;
+      --text:        #dde2f0;
+      --text2:       #a8b0c8;
+      --muted:       #606880;
+      --radius:      16px;
+      --radius-sm:   10px;
+      --shadow:      0 12px 48px rgba(0,0,0,.5);
+      --shadow-sm:   0 4px 16px rgba(0,0,0,.3);
+      --font-head:   'Syne', system-ui, sans-serif;
+      --font-body:   'DM Sans', system-ui, sans-serif;
+      --trans:       .2s cubic-bezier(.4,0,.2,1);
+      --trans-slow:  .4s cubic-bezier(.4,0,.2,1);
+    }
+
+    /* ═══════════════════════════════════════════
+       LIGHT MODE
+    ═══════════════════════════════════════════ */
+    [data-theme="light"] {
+      --bg:          #f4f6fb;
+      --bg2:         #eef0f7;
+      --surface:     #ffffff;
+      --card:        #ffffff;
+      --card2:       #f8faff;
+      --border:      #e2e6f0;
+      --border2:     #d0d6e8;
+      --accent:      #c89000;
+      --accent-dim:  rgba(200,144,0,.08);
+      --accent-glow: rgba(200,144,0,.18);
+      --blue:        #2563eb;
+      --blue-dim:    rgba(37,99,235,.08);
+      --green:       #059669;
+      --green-dim:   rgba(5,150,105,.08);
+      --red:         #dc2626;
+      --red-dim:     rgba(220,38,38,.08);
+      --orange:      #ea580c;
+      --text:        #1a1f2e;
+      --text2:       #4a5168;
+      --muted:       #8892a8;
+      --shadow:      0 12px 48px rgba(0,0,0,.1);
+      --shadow-sm:   0 4px 16px rgba(0,0,0,.06);
+    }
+
+    /* ═══════════════════════════════════════════
+       RESET
+    ═══════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.65;
+      min-height: 100vh;
+      transition: background var(--trans-slow), color var(--trans-slow);
+    }
+
+    /* ═══════════════════════════════════════════
+       GRAIN OVERLAY
+    ═══════════════════════════════════════════ */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.028'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0;
+    }
+
+    /* ═══════════════════════════════════════════
+       GLOWS
+    ═══════════════════════════════════════════ */
+    .glow {
+      position: fixed; border-radius: 50%;
+      filter: blur(120px); pointer-events: none; z-index: 0;
+      transition: background var(--trans-slow);
+    }
+    .glow-a { width: 600px; height: 600px; top: -200px; left: 50%; transform: translateX(-60%); background: rgba(240,192,64,.05); }
+    .glow-b { width: 400px; height: 400px; bottom: 0; right: -100px; background: rgba(79,142,247,.04); }
+
+    /* ═══════════════════════════════════════════
+       LAYOUT
+    ═══════════════════════════════════════════ */
+    .wrapper {
+      position: relative; z-index: 1;
+      max-width: 820px; margin: 0 auto;
+      padding: 2rem 1.25rem 6rem;
+    }
+
+    /* ═══════════════════════════════════════════
+       TOP BAR
+    ═══════════════════════════════════════════ */
+    .top-bar {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 2.5rem; gap: 1rem;
+    }
+    .badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: var(--accent-dim); border: 1px solid rgba(240,192,64,.25);
+      color: var(--accent); font-size: .7rem; font-weight: 700;
+      letter-spacing: .12em; text-transform: uppercase;
+      padding: .3rem .85rem; border-radius: 100px;
+    }
+    .top-actions { display: flex; gap: .6rem; align-items: center; }
+
+    /* Theme toggle */
+    .btn-icon {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 36px; height: 36px; border-radius: 8px;
+      background: var(--card); border: 1px solid var(--border);
+      color: var(--text2); cursor: pointer;
+      transition: all var(--trans);
+    }
+    .btn-icon:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-icon svg { width: 16px; height: 16px; }
+
+    /* Period toggle */
+    .period-toggle {
+      display: flex; background: var(--card); border: 1px solid var(--border);
+      border-radius: 9px; padding: 3px; gap: 2px;
+    }
+    .period-btn {
+      padding: .3rem .9rem; border-radius: 6px; border: none;
+      font-family: var(--font-body); font-size: .78rem; font-weight: 600;
+      cursor: pointer; color: var(--muted); background: transparent;
+      transition: all var(--trans); letter-spacing: .03em;
+    }
+    .period-btn.active {
+      background: var(--accent); color: #0b0d12;
+    }
+
+    /* ═══════════════════════════════════════════
+       HEADER
+    ═══════════════════════════════════════════ */
+    header { margin-bottom: 2.5rem; }
+    h1 {
+      font-family: var(--font-head); font-size: clamp(1.9rem, 5vw, 2.9rem);
+      font-weight: 800; line-height: 1.1; color: var(--text);
+      letter-spacing: -.02em;
+    }
+    h1 span { color: var(--accent); }
+    .subtitle {
+      margin-top: .65rem; color: var(--text2); font-size: .93rem;
+      max-width: 520px;
+    }
+
+    /* ═══════════════════════════════════════════
+       PRESETS
+    ═══════════════════════════════════════════ */
+    .presets-label {
+      font-size: .7rem; font-weight: 600; letter-spacing: .1em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: .6rem;
+    }
+    .presets { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 1.5rem; }
+    .preset-btn {
+      padding: .4rem 1rem; border-radius: 100px;
+      border: 1px solid var(--border2); background: var(--card);
+      color: var(--text2); font-family: var(--font-body);
+      font-size: .8rem; font-weight: 500; cursor: pointer;
+      transition: all var(--trans); white-space: nowrap;
+    }
+    .preset-btn:hover { border-color: var(--accent); color: var(--accent); background: var(--accent-dim); }
+
+    /* ═══════════════════════════════════════════
+       CARD
+    ═══════════════════════════════════════════ */
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 1.75rem;
+      box-shadow: var(--shadow); margin-bottom: 1rem;
+      transition: background var(--trans-slow), border-color var(--trans-slow);
+    }
+    .card-title {
+      font-size: .68rem; font-weight: 700; letter-spacing: .12em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 1.4rem;
+      display: flex; align-items: center; gap: .6rem;
+    }
+    .card-title::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+    /* ═══════════════════════════════════════════
+       GRID
+    ═══════════════════════════════════════════ */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+    @media (max-width: 560px) {
+      .grid-2, .grid-3 { grid-template-columns: 1fr; }
+    }
+
+    /* ═══════════════════════════════════════════
+       FORM ELEMENTS
+    ═══════════════════════════════════════════ */
+    .field { display: flex; flex-direction: column; gap: .4rem; }
+    .field-label {
+      font-size: .78rem; font-weight: 500; color: var(--text2);
+      display: flex; align-items: center; gap: .35rem;
+    }
+    .tip {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 15px; height: 15px; border-radius: 50%;
+      background: var(--border2); color: var(--muted);
+      font-size: .6rem; cursor: help; flex-shrink: 0;
+      transition: all var(--trans); font-weight: 700;
+    }
+    .tip:hover { background: var(--accent); color: #0b0d12; }
+
+    .input-wrap { position: relative; }
+    .input-sym {
+      position: absolute; top: 50%; left: .9rem;
+      transform: translateY(-50%); color: var(--muted);
+      font-size: .85rem; pointer-events: none; z-index: 1;
+    }
+    .input-right {
+      position: absolute; top: 50%; right: .9rem;
+      transform: translateY(-50%); color: var(--muted);
+      font-size: .75rem; pointer-events: none;
+    }
+
+    input[type="number"], input[type="range"], select {
+      width: 100%; font-family: var(--font-body);
+      transition: border-color var(--trans), box-shadow var(--trans), background var(--trans-slow);
+    }
+    input[type="number"], select {
+      background: var(--surface); border: 1.5px solid var(--border);
+      border-radius: 9px; color: var(--text);
+      font-size: .92rem; padding: .72rem 1rem .72rem 2.1rem;
+      appearance: none; -moz-appearance: textfield;
+    }
+    input[type="number"]::-webkit-inner-spin-button,
+    input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; }
+    select {
+      padding-left: 1rem;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23606880' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right .9rem center;
+    }
+    [data-theme="light"] select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' fill='none'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%238892a8' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E");
+    }
+    input[type="number"]:focus, select:focus {
+      outline: none; border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-glow);
+    }
+    input.is-error { border-color: var(--red) !important; box-shadow: 0 0 0 3px var(--red-dim) !important; }
+    .err-msg { font-size: .73rem; color: var(--red); min-height: .9rem; }
+
+    /* Slider */
+    .slider-wrap { display: flex; align-items: center; gap: .75rem; margin-top: .35rem; }
+    input[type="range"] {
+      flex: 1; height: 4px; background: var(--border2);
+      border-radius: 100px; cursor: pointer; border: none;
+      padding: 0; appearance: none; -webkit-appearance: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none; width: 18px; height: 18px;
+      border-radius: 50%; background: var(--accent);
+      cursor: pointer; border: 2px solid var(--bg);
+      box-shadow: 0 0 0 2px var(--accent-glow);
+      transition: transform var(--trans);
+    }
+    input[type="range"]::-webkit-slider-thumb:hover { transform: scale(1.2); }
+    input[type="range"]::-moz-range-thumb {
+      width: 18px; height: 18px; border-radius: 50%;
+      background: var(--accent); cursor: pointer; border: 2px solid var(--bg);
+    }
+    .slider-val {
+      font-size: .82rem; font-weight: 600; color: var(--accent);
+      min-width: 52px; text-align: right;
+    }
+
+    /* ═══════════════════════════════════════════
+       TOGGLE
+    ═══════════════════════════════════════════ */
+    .toggle-row {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; padding: .85rem 0; border-bottom: 1px solid var(--border);
+    }
+    .toggle-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .toggle-info { flex: 1; }
+    .toggle-title { font-size: .86rem; color: var(--text); font-weight: 500; }
+    .toggle-sub { font-size: .74rem; color: var(--muted); margin-top: .1rem; }
+    .switch { position: relative; width: 42px; height: 23px; flex-shrink: 0; }
+    .switch input { opacity: 0; width: 0; height: 0; }
+    .sw-slider {
+      position: absolute; cursor: pointer; inset: 0;
+      background: var(--border2); border-radius: 100px;
+      transition: background var(--trans);
+    }
+    .sw-slider::before {
+      content: ''; position: absolute; width: 17px; height: 17px;
+      left: 3px; top: 3px; background: #fff; border-radius: 50%;
+      transition: transform var(--trans);
+      box-shadow: 0 1px 4px rgba(0,0,0,.3);
+    }
+    .switch input:checked + .sw-slider { background: var(--accent); }
+    .switch input:checked + .sw-slider::before { transform: translateX(19px); }
+
+    /* ═══════════════════════════════════════════
+       ALERTS
+    ═══════════════════════════════════════════ */
+    .alert {
+      display: flex; align-items: flex-start; gap: .7rem;
+      padding: .85rem 1rem; border-radius: var(--radius-sm);
+      font-size: .82rem; margin-top: .75rem;
+      animation: fadeIn .3s ease both;
+    }
+    .alert-warn { background: rgba(249,115,22,.08); border: 1px solid rgba(249,115,22,.25); color: #f97316; }
+    .alert-info { background: var(--blue-dim); border: 1px solid rgba(79,142,247,.2); color: var(--blue); }
+    .alert-success { background: var(--green-dim); border: 1px solid rgba(62,207,142,.2); color: var(--green); }
+    .alert-icon { font-size: 1rem; flex-shrink: 0; margin-top: .05rem; }
+    .alert-text { color: var(--text2); line-height: 1.5; }
+    .alert-text strong { color: var(--text); }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: translateY(0); } }
+
+    /* ═══════════════════════════════════════════
+       BUTTONS
+    ═══════════════════════════════════════════ */
+    .btn-primary {
+      width: 100%; padding: .95rem; background: var(--accent);
+      color: #0b0d12; border: none; border-radius: var(--radius-sm);
+      font-family: var(--font-head); font-size: 1rem; font-weight: 700;
+      cursor: pointer; letter-spacing: .03em;
+      transition: background var(--trans), transform var(--trans), box-shadow var(--trans);
+      display: flex; align-items: center; justify-content: center; gap: .55rem;
+    }
+    .btn-primary:hover { background: #f5cc5a; box-shadow: 0 6px 28px var(--accent-glow); transform: translateY(-1px); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary svg { width: 18px; height: 18px; }
+
+    .btn-secondary {
+      padding: .55rem 1.1rem; border-radius: 8px;
+      border: 1.5px solid var(--border); background: var(--surface);
+      color: var(--text2); font-family: var(--font-body);
+      font-size: .8rem; font-weight: 500; cursor: pointer;
+      transition: all var(--trans); display: inline-flex;
+      align-items: center; gap: .4rem;
+    }
+    .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+    .btn-secondary svg { width: 14px; height: 14px; }
+    .btn-secondary.success { border-color: var(--green); color: var(--green); }
+
+    .btn-reset {
+      padding: .55rem 1.1rem; border-radius: 8px;
+      border: 1.5px solid var(--border); background: transparent;
+      color: var(--muted); font-family: var(--font-body);
+      font-size: .8rem; font-weight: 500; cursor: pointer;
+      transition: all var(--trans); display: inline-flex;
+      align-items: center; gap: .4rem;
+    }
+    .btn-reset:hover { border-color: var(--red); color: var(--red); }
+    .btn-reset svg { width: 14px; height: 14px; }
+
+    .cta-row { display: flex; gap: .6rem; margin-top: .6rem; }
+
+    /* ═══════════════════════════════════════════
+       RESULTS
+    ═══════════════════════════════════════════ */
+    #results { display: none; }
+    #results.visible { display: block; animation: fadeUp .45s cubic-bezier(.4,0,.2,1) both; }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Hero neto */
+    .neto-hero {
+      background: linear-gradient(135deg, rgba(240,192,64,.1) 0%, rgba(79,142,247,.06) 100%);
+      border: 1px solid rgba(240,192,64,.3);
+      border-radius: var(--radius); padding: 1.75rem;
+      margin-bottom: 1rem; text-align: center; position: relative; overflow: hidden;
+    }
+    .neto-hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(circle at 50% 0%, rgba(240,192,64,.08) 0%, transparent 70%);
+    }
+    .neto-label { font-size: .7rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); margin-bottom: .4rem; }
+    .neto-amount {
+      font-family: var(--font-head); font-size: clamp(2.4rem, 7vw, 3.5rem);
+      font-weight: 800; color: var(--accent); letter-spacing: -.02em;
+      line-height: 1; margin-bottom: .3rem;
+    }
+    .neto-sub { font-size: .83rem; color: var(--text2); }
+    .neto-badges { display: flex; justify-content: center; gap: .5rem; flex-wrap: wrap; margin-top: .85rem; }
+    .neto-badge {
+      font-size: .72rem; font-weight: 600; padding: .25rem .7rem;
+      border-radius: 100px; border: 1px solid;
+    }
+    .neto-badge.b-hour { background: var(--blue-dim); border-color: rgba(79,142,247,.3); color: var(--blue); }
+    .neto-badge.b-day  { background: var(--green-dim); border-color: rgba(62,207,142,.25); color: var(--green); }
+    .neto-badge.b-eff  { background: var(--accent-dim); border-color: rgba(240,192,64,.3); color: var(--accent); }
+
+    /* Stats grid */
+    .stats-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: .75rem; margin-bottom: 1rem; }
+    @media (max-width: 480px) { .stats-grid { grid-template-columns: 1fr 1fr; } }
+
+    .stat-card {
+      background: var(--card2); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 1rem 1.1rem;
+      transition: border-color var(--trans), background var(--trans-slow);
+    }
+    .stat-card:hover { border-color: var(--border2); }
+    .stat-label { font-size: .68rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; margin-bottom: .3rem; }
+    .stat-value { font-size: 1.2rem; font-weight: 600; color: var(--text); font-variant-numeric: tabular-nums; }
+    .stat-note  { font-size: .68rem; color: var(--muted); margin-top: .15rem; }
+    .stat-card.neg .stat-value { color: var(--red); }
+    .stat-card.pos .stat-value { color: var(--green); }
+
+    /* Donut chart */
+    .chart-row { display: grid; grid-template-columns: auto 1fr; gap: 1.5rem; align-items: center; margin: .5rem 0 1rem; }
+    @media (max-width: 440px) { .chart-row { grid-template-columns: 1fr; } }
+    .donut-wrap { position: relative; width: 130px; height: 130px; flex-shrink: 0; }
+    .donut-wrap svg { width: 100%; height: 100%; }
+    .donut-center {
+      position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+      text-align: center; pointer-events: none;
+    }
+    .donut-pct { font-family: var(--font-head); font-size: 1.5rem; font-weight: 800; color: var(--accent); line-height: 1; }
+    .donut-lbl { font-size: .6rem; color: var(--muted); text-transform: uppercase; letter-spacing: .08em; }
+
+    /* Bars */
+    .bars { display: flex; flex-direction: column; gap: .55rem; }
+    .bar-row { display: flex; align-items: center; gap: .7rem; }
+    .bar-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .bar-label { font-size: .78rem; color: var(--text2); flex: 1; min-width: 0; }
+    .bar-label-amount { font-size: .75rem; color: var(--muted); white-space: nowrap; }
+    .bar-track { height: 6px; background: var(--border); border-radius: 100px; overflow: hidden; flex: 2; }
+    .bar-fill { height: 100%; border-radius: 100px; transition: width .8s cubic-bezier(.4,0,.2,1); }
+    .bar-pct { font-size: .72rem; color: var(--muted); width: 32px; text-align: right; flex-shrink: 0; }
+
+    /* Trimestral */
+    .trimes-grid { display: grid; grid-template-columns: 1fr 1fr; gap: .7rem; }
+    @media (max-width: 440px) { .trimes-grid { grid-template-columns: 1fr; } }
+    .trimes-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: .9rem 1rem;
+    }
+    .trimes-title { font-size: .68rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; margin-bottom: .5rem; }
+    .trimes-amount { font-size: 1.3rem; font-weight: 600; font-variant-numeric: tabular-nums; }
+    .trimes-dates { font-size: .7rem; color: var(--muted); margin-top: .25rem; }
+    .trimes-dates span { display: block; }
+
+    /* Inversa */
+    .inversa-box {
+      background: var(--blue-dim); border: 1px solid rgba(79,142,247,.2);
+      border-radius: var(--radius-sm); padding: 1rem 1.1rem;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 1rem; flex-wrap: wrap;
+    }
+    .inversa-label { font-size: .78rem; color: var(--text2); }
+    .inversa-amount { font-family: var(--font-head); font-size: 1.6rem; font-weight: 800; color: var(--blue); }
+    .inversa-note { font-size: .7rem; color: var(--muted); margin-top: .1rem; }
+
+    /* Savings tarifa plana */
+    .savings-box {
+      background: var(--green-dim); border: 1px solid rgba(62,207,142,.2);
+      border-radius: var(--radius-sm); padding: 1rem 1.1rem;
+      display: flex; align-items: center; gap: 1rem;
+    }
+    .savings-icon { font-size: 1.8rem; }
+    .savings-text .savings-amount { font-family: var(--font-head); font-size: 1.4rem; font-weight: 800; color: var(--green); }
+    .savings-text .savings-desc { font-size: .76rem; color: var(--text2); margin-top: .1rem; }
+
+    /* Copy row */
+    .result-actions { display: flex; gap: .6rem; justify-content: flex-end; flex-wrap: wrap; margin-top: .5rem; }
+
+    /* ═══════════════════════════════════════════
+       OBJETIVO NETO (modo inverso)
+    ═══════════════════════════════════════════ */
+    .modo-tabs {
+      display: flex; gap: .3rem; margin-bottom: 1.5rem;
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius-sm); padding: 4px;
+    }
+    .modo-tab {
+      flex: 1; padding: .5rem; border-radius: 7px; border: none;
+      font-family: var(--font-body); font-size: .82rem; font-weight: 600;
+      cursor: pointer; color: var(--muted); background: transparent;
+      transition: all var(--trans); text-align: center;
+    }
+    .modo-tab.active { background: var(--accent); color: #0b0d12; }
+    .modo-panel { display: none; }
+    .modo-panel.active { display: block; }
+
+    /* ═══════════════════════════════════════════
+       INFO SECTION
+    ═══════════════════════════════════════════ */
+    .info-section { margin-top: 3.5rem; }
+    .info-section h2 {
+      font-family: var(--font-head); font-size: clamp(1.4rem, 3vw, 1.85rem);
+      font-weight: 700; color: var(--text); margin-bottom: 1rem; letter-spacing: -.01em;
+    }
+    .info-section h3 {
+      font-family: var(--font-head); font-size: 1.1rem; font-weight: 700;
+      color: var(--accent); margin: 1.8rem 0 .55rem;
+    }
+    .info-section p { color: var(--text2); font-size: .9rem; margin-bottom: .75rem; line-height: 1.7; }
+    .info-section ul { padding-left: 1.2rem; }
+    .info-section ul li { color: var(--text2); font-size: .9rem; margin-bottom: .35rem; line-height: 1.6; }
+
+    .tramos-table { width: 100%; border-collapse: collapse; font-size: .83rem; margin: .8rem 0 1rem; }
+    .tramos-table th {
+      text-align: left; color: var(--accent); font-size: .68rem;
+      letter-spacing: .1em; text-transform: uppercase;
+      padding: .55rem .8rem; border-bottom: 1px solid var(--border);
+      font-family: var(--font-head);
+    }
+    .tramos-table td { padding: .6rem .8rem; color: var(--text2); border-bottom: 1px solid var(--border); }
+    .tramos-table tr:last-child td { border-bottom: none; }
+    .tramos-table tr:hover td { color: var(--text); background: rgba(255,255,255,.02); }
+    .tramos-table td:last-child { font-weight: 600; color: var(--accent); }
+
+    .disclaimer {
+      margin-top: 2.5rem; background: var(--red-dim);
+      border: 1px solid rgba(242,80,90,.2); border-radius: var(--radius-sm);
+      padding: 1rem 1.2rem; font-size: .79rem; color: var(--text2); line-height: 1.6;
+    }
+    .disclaimer strong { color: var(--red); }
+
+    /* ═══════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════ */
+    footer {
+      text-align: center; margin-top: 3rem; padding-top: 2rem;
+      border-top: 1px solid var(--border); font-size: .76rem; color: var(--muted);
+    }
+
+    /* ═══════════════════════════════════════════
+       RESPONSIVE TWEAKS
+    ═══════════════════════════════════════════ */
+    @media (max-width: 480px) {
+      .card { padding: 1.25rem; }
+      .neto-amount { font-size: 2.4rem; }
+      .stats-grid { grid-template-columns: 1fr 1fr; }
+      .cta-row { flex-direction: column; }
+      .btn-primary { width: 100%; }
+    }
+
+    /* ═══════════════════════════════════════════
+       DISABLED
+    ═══════════════════════════════════════════ */
+    .disabled { opacity: .4; pointer-events: none; }
+
+    /* ═══════════════════════════════════════════
+       TRAMO HIGHLIGHT
+    ═══════════════════════════════════════════ */
+    .tramo-suggestion {
+      font-size: .73rem; color: var(--blue); margin-top: .2rem;
+      display: flex; align-items: center; gap: .3rem;
+    }
+  </style>
+</head>
+<body>
+
+<div class="glow glow-a"></div>
+<div class="glow glow-b"></div>
+
+<div class="wrapper">
+
+  <!-- ══ TOP BAR ══════════════════════════════ -->
+  <div class="top-bar">
+    <div class="badge">⚡ 2025 · Actualizado</div>
+    <div class="top-actions">
+      <div class="period-toggle" role="group" aria-label="Periodo de visualización">
+        <button class="period-btn active" data-period="mes" onclick="setPeriod('mes')">Mensual</button>
+        <button class="period-btn" data-period="anual" onclick="setPeriod('anual')">Anual</button>
+      </div>
+      <button class="btn-icon" onclick="toggleTheme()" title="Cambiar tema" aria-label="Cambiar tema claro/oscuro">
+        <svg id="icon-theme" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ══ HEADER ════════════════════════════════ -->
+  <header>
+    <h1>Calculadora para<br><span>Autónomos</span> en España</h1>
+    <p class="subtitle">Neto real, cuota SS, IRPF, IVA trimestral y precio/hora. Todo calculado al instante.</p>
+  </header>
+
+  <!-- ══ PRESETS ════════════════════════════════ -->
+  <div class="presets-label">Cargar perfil de ejemplo</div>
+  <div class="presets">
+    <button class="preset-btn" onclick="applyPreset('junior')">🎨 Freelance Junior · 1.200 €</button>
+    <button class="preset-btn" onclick="applyPreset('mid')">💻 Desarrollador Mid · 2.500 €</button>
+    <button class="preset-btn" onclick="applyPreset('senior')">🚀 Consultor Senior · 4.500 €</button>
+    <button class="preset-btn" onclick="applyPreset('nuevo')">🌱 Nuevo autónomo · 1.500 €</button>
+  </div>
+
+  <!-- ══ MODO TABS ══════════════════════════════ -->
+  <div class="modo-tabs" role="tablist">
+    <button class="modo-tab active" role="tab" aria-selected="true" onclick="setModo('calcular')">📊 Calcular mi neto</button>
+    <button class="modo-tab" role="tab" aria-selected="false" onclick="setModo('objetivo')">🎯 ¿Cuánto debo cobrar?</button>
+  </div>
+
+  <!-- ══ PANEL 1: CALCULADORA NORMAL ═══════════ -->
+  <div id="panel-calcular" class="modo-panel active">
+
+    <!-- Facturación -->
+    <div class="card">
+      <div class="card-title">Facturación mensual</div>
+      <div class="grid-2" style="margin-bottom:1rem">
+        <div class="field">
+          <label class="field-label" for="ingresos">
+            Ingresos brutos (sin IVA)
+            <span class="tip" title="Total de tus facturas emitidas sin IVA en un mes">?</span>
+          </label>
+          <div class="input-wrap">
+            <span class="input-sym">€</span>
+            <input type="number" id="ingresos" placeholder="3.000" min="0" step="50" />
+          </div>
+          <div class="slider-wrap">
+            <input type="range" id="slider-ingresos" min="0" max="10000" step="50" value="0" />
+            <span class="slider-val" id="slval-ingresos">0 €</span>
+          </div>
+          <span class="err-msg" id="err-ingresos"></span>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="gastos">
+            Gastos deducibles
+            <span class="tip" title="Gestoría, material, suministros, formación, etc. Todos los gastos de tu actividad.">?</span>
+          </label>
+          <div class="input-wrap">
+            <span class="input-sym">€</span>
+            <input type="number" id="gastos" placeholder="400" min="0" step="50" />
+          </div>
+          <div class="slider-wrap">
+            <input type="range" id="slider-gastos" min="0" max="5000" step="50" value="0" />
+            <span class="slider-val" id="slval-gastos">0 €</span>
+          </div>
+          <span class="err-msg" id="err-gastos"></span>
+        </div>
+      </div>
+
+      <div class="field">
+        <label class="field-label" for="horas">
+          Horas trabajadas al mes
+          <span class="tip" title="Para calcular tu tarifa/hora real neta">?</span>
+        </label>
+        <div class="input-wrap">
+          <span class="input-sym">h</span>
+          <input type="number" id="horas" placeholder="120" min="1" max="300" step="1" value="120" style="padding-left:2.1rem" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Configuración fiscal -->
+    <div class="card">
+      <div class="card-title">Configuración fiscal</div>
+      <div class="grid-3" style="margin-bottom:1.2rem">
+        <div class="field">
+          <label class="field-label" for="irpf">
+            Retención IRPF
+            <span class="tip" title="7% primer año / 15% tipo general. Solo aplica si emites facturas a empresas.">?</span>
+          </label>
+          <div class="input-wrap">
+            <span class="input-sym">%</span>
+            <input type="number" id="irpf" value="15" min="0" max="48" step="0.5" />
+          </div>
+          <span class="err-msg" id="err-irpf"></span>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="iva">Tipo de IVA</label>
+          <select id="iva">
+            <option value="21">21% — General</option>
+            <option value="10">10% — Reducido</option>
+            <option value="4">4% — Superreducido</option>
+            <option value="0">0% — Exento / Intracomunitario</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label class="field-label" for="tramo">
+            Tramo SS 2025
+            <span class="tip" title="Se sugiere automáticamente según tus ingresos. Puedes cambiarlo manualmente.">?</span>
+          </label>
+          <select id="tramo">
+            <option value="200">Hasta 670 € → 200 €/mes</option>
+            <option value="220">670–900 € → 220 €/mes</option>
+            <option value="260">900–1.167 € → 260 €/mes</option>
+            <option value="310" selected>1.167–1.300 € → 310 €/mes</option>
+            <option value="370">1.300–1.500 € → 370 €/mes</option>
+            <option value="420">1.500–1.700 € → 420 €/mes</option>
+            <option value="470">1.700–1.850 € → 470 €/mes</option>
+            <option value="530">1.850–2.030 € → 530 €/mes</option>
+            <option value="590">2.030–2.330 € → 590 €/mes</option>
+            <option value="650">2.330–2.760 € → 650 €/mes</option>
+            <option value="720">2.760–3.190 € → 720 €/mes</option>
+            <option value="850">3.190–3.620 € → 850 €/mes</option>
+            <option value="950">3.620–4.050 € → 950 €/mes</option>
+            <option value="1100">Más de 6.000 € → 1.100 €/mes</option>
+          </select>
+          <div id="tramo-suggestion" class="tramo-suggestion" style="display:none">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            <span id="tramo-suggestion-text"></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Toggles -->
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <div class="toggle-title">Tarifa plana — nuevos autónomos</div>
+          <div class="toggle-sub">80 €/mes el primer año. Activa para ver el ahorro.</div>
+        </div>
+        <label class="switch"><input type="checkbox" id="tarifaPlana" /><span class="sw-slider"></span></label>
+      </div>
+
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <div class="toggle-title">Tengo empleados</div>
+          <div class="toggle-sub">Añade cotización adicional como empleador (+1,2% s/base)</div>
+        </div>
+        <label class="switch"><input type="checkbox" id="empleados" /><span class="sw-slider"></span></label>
+      </div>
+
+      <div class="toggle-row">
+        <div class="toggle-info">
+          <div class="toggle-title">Facturo a particulares (no retengo IRPF)</div>
+          <div class="toggle-sub">Si tus clientes son personas físicas, no hay retención en factura</div>
+        </div>
+        <label class="switch"><input type="checkbox" id="soloParticulares" /><span class="sw-slider"></span></label>
+      </div>
+
+      <div id="alert-ctx" style="margin-top:0"></div>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-row">
+      <button class="btn-primary" id="btn-calcular" onclick="calcular()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 7H6a2 2 0 00-2 2v9a2 2 0 002 2h9a2 2 0 002-2v-3"/><path d="M9 11l3 3L22 4"/></svg>
+        Calcular mi neto
+      </button>
+      <button class="btn-reset" onclick="resetForm()" title="Limpiar todos los campos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+        Resetear
+      </button>
+    </div>
+
+    <!-- ══ RESULTADOS ════════════════════════ -->
+    <div id="results">
+
+      <!-- Hero neto -->
+      <div class="neto-hero" style="margin-top:1rem">
+        <div class="neto-label" id="r-period-label">💰 Neto real que te llevas al mes</div>
+        <div class="neto-amount" id="r-neto">—</div>
+        <div class="neto-sub" id="r-neto-sub">Después de cuota SS, retención IRPF y gastos deducibles</div>
+        <div class="neto-badges">
+          <span class="neto-badge b-hour" id="r-badge-hora">— €/hora</span>
+          <span class="neto-badge b-day" id="r-badge-dia">— €/día laboral</span>
+          <span class="neto-badge b-eff" id="r-badge-eff">Eficiencia —%</span>
+        </div>
+      </div>
+
+      <div id="alert-bajo"></div>
+      <div id="alert-perdidas"></div>
+      <div id="savings-tp" style="display:none; margin-bottom:1rem">
+        <div class="savings-box">
+          <div class="savings-icon">🎉</div>
+          <div class="savings-text">
+            <div class="savings-amount" id="savings-amount">—</div>
+            <div class="savings-desc">Ahorro con tarifa plana en los próximos 12 meses frente al tramo sin tarifa plana</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Donut + barras -->
+      <div class="card">
+        <div class="card-title">Desglose de tu facturación</div>
+        <div class="chart-row">
+          <div class="donut-wrap">
+            <svg viewBox="0 0 36 36" style="transform:rotate(-90deg)">
+              <circle cx="18" cy="18" r="15.9155" fill="none" stroke="var(--border)" stroke-width="3.5"/>
+              <circle id="donut-neto"   cx="18" cy="18" r="15.9155" fill="none" stroke="var(--accent)" stroke-width="3.5" stroke-dasharray="0 100" stroke-linecap="round"/>
+              <circle id="donut-ss"     cx="18" cy="18" r="15.9155" fill="none" stroke="var(--red)"    stroke-width="3.5" stroke-dasharray="0 100" stroke-linecap="round"/>
+              <circle id="donut-irpf"   cx="18" cy="18" r="15.9155" fill="none" stroke="var(--orange)" stroke-width="3.5" stroke-dasharray="0 100" stroke-linecap="round"/>
+              <circle id="donut-gastos" cx="18" cy="18" r="15.9155" fill="none" stroke="var(--blue)"   stroke-width="3.5" stroke-dasharray="0 100" stroke-linecap="round"/>
+            </svg>
+            <div class="donut-center">
+              <div class="donut-pct" id="donut-center-pct">—</div>
+              <div class="donut-lbl">neto</div>
+            </div>
+          </div>
+          <div class="bars" id="bars-desglose"></div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid">
+        <div class="stat-card neg">
+          <div class="stat-label">Cuota SS mensual</div>
+          <div class="stat-value" id="r-cuota">—</div>
+          <div class="stat-note" id="r-cuota-note">Tramo seleccionado</div>
+        </div>
+        <div class="stat-card neg">
+          <div class="stat-label">IRPF retenido</div>
+          <div class="stat-value" id="r-irpf">—</div>
+          <div class="stat-note">Ya pagado por tus clientes</div>
+        </div>
+        <div class="stat-card neg">
+          <div class="stat-label">Gastos deducibles</div>
+          <div class="stat-value" id="r-gastos">—</div>
+          <div class="stat-note">Reducen tu base imponible</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">IVA repercutido</div>
+          <div class="stat-value" id="r-iva">—</div>
+          <div class="stat-note">No es tuyo → Hacienda</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Rendimiento neto</div>
+          <div class="stat-value" id="r-base">—</div>
+          <div class="stat-note">Base imponible IRPF</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">IRPF Renta (anual)</div>
+          <div class="stat-value" id="r-irpf-renta">—</div>
+          <div class="stat-note">Estimación orientativa</div>
+        </div>
+      </div>
+
+      <!-- Obligaciones trimestrales -->
+      <div class="card">
+        <div class="card-title">Obligaciones trimestrales</div>
+        <div class="trimes-grid">
+          <div class="trimes-card" style="border-color:rgba(79,142,247,.3)">
+            <div class="trimes-title" style="color:var(--blue)">📋 Modelo 303 — IVA</div>
+            <div class="trimes-amount" id="r-iva-trim" style="color:var(--blue)">—</div>
+            <div class="trimes-dates">
+              <span>▸ T1 → hasta 20 abril</span>
+              <span>▸ T2 → hasta 20 julio</span>
+              <span>▸ T3 → hasta 20 octubre</span>
+              <span>▸ T4 → hasta 30 enero</span>
+            </div>
+          </div>
+          <div class="trimes-card" style="border-color:rgba(249,115,22,.3)">
+            <div class="trimes-title" style="color:var(--orange)">📋 Modelo 130 — IRPF</div>
+            <div class="trimes-amount" id="r-irpf-trim" style="color:var(--orange)">—</div>
+            <div class="trimes-dates">
+              <span>▸ T1 → hasta 20 abril</span>
+              <span>▸ T2 → hasta 20 julio</span>
+              <span>▸ T3 → hasta 20 octubre</span>
+              <span>▸ T4 → hasta 30 enero</span>
+            </div>
+          </div>
+          <div class="trimes-card" style="border-color:rgba(242,80,90,.3); grid-column:1/-1">
+            <div class="trimes-title" style="color:var(--red)">🏛 Cuota SS trimestral (3 meses)</div>
+            <div class="trimes-amount" id="r-ss-trim" style="color:var(--red)">—</div>
+            <div class="trimes-dates">
+              <span>▸ Se domicilia mensualmente el último día hábil de cada mes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Factura mínima inversa -->
+      <div class="card">
+        <div class="card-title">Cálculo inverso — ¿cuánto debes cobrar?</div>
+        <div class="inversa-box">
+          <div>
+            <div class="inversa-label">Para mantener este neto de <strong id="r-inversa-neto">—</strong>, debes facturar al menos:</div>
+            <div class="inversa-amount" id="r-inversa-bruto">—</div>
+            <div class="inversa-note">Sin IVA · Con la misma configuración fiscal</div>
+          </div>
+          <div style="text-align:right; flex-shrink:0">
+            <div class="inversa-label" style="margin-bottom:.2rem">Precio/hora mínimo</div>
+            <div class="inversa-amount" id="r-inversa-hora" style="font-size:1.2rem">—</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="result-actions">
+        <button class="btn-secondary" id="btnCopy" onclick="copiarResultados()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg>
+          Copiar resultados
+        </button>
+        <button class="btn-secondary" onclick="window.print()" style="display:none" id="btnPrint">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 01-2-2v-5a2 2 0 012-2h16a2 2 0 012 2v5a2 2 0 01-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+          Imprimir
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ PANEL 2: OBJETIVO NETO ═════════════════ -->
+  <div id="panel-objetivo" class="modo-panel">
+    <div class="card">
+      <div class="card-title">¿Cuánto quieres llevarte a casa?</div>
+      <div class="grid-2" style="margin-bottom:1.2rem">
+        <div class="field">
+          <label class="field-label" for="obj-neto">Neto deseado al mes</label>
+          <div class="input-wrap">
+            <span class="input-sym">€</span>
+            <input type="number" id="obj-neto" placeholder="2.000" min="0" step="100" />
+          </div>
+        </div>
+        <div class="field">
+          <label class="field-label" for="obj-horas">Horas/mes disponibles</label>
+          <div class="input-wrap">
+            <span class="input-sym">h</span>
+            <input type="number" id="obj-horas" placeholder="120" min="1" max="300" value="120" />
+          </div>
+        </div>
+        <div class="field">
+          <label class="field-label" for="obj-irpf">Retención IRPF (%)</label>
+          <div class="input-wrap">
+            <span class="input-sym">%</span>
+            <input type="number" id="obj-irpf" value="15" min="0" max="48" step="0.5" />
+          </div>
+        </div>
+        <div class="field">
+          <label class="field-label" for="obj-tramo">Tramo SS estimado</label>
+          <select id="obj-tramo">
+            <option value="200">200 €/mes</option>
+            <option value="220">220 €/mes</option>
+            <option value="260">260 €/mes</option>
+            <option value="310" selected>310 €/mes</option>
+            <option value="370">370 €/mes</option>
+            <option value="420">420 €/mes</option>
+            <option value="470">470 €/mes</option>
+            <option value="530">530 €/mes</option>
+            <option value="590">590 €/mes</option>
+            <option value="650">650 €/mes</option>
+            <option value="720">720 €/mes</option>
+            <option value="850">850 €/mes</option>
+            <option value="950">950 €/mes</option>
+            <option value="1100">1.100 €/mes</option>
+          </select>
+        </div>
+      </div>
+      <div class="field" style="margin-bottom:1rem">
+        <label class="field-label" for="obj-gastos">Gastos deducibles estimados</label>
+        <div class="input-wrap">
+          <span class="input-sym">€</span>
+          <input type="number" id="obj-gastos" placeholder="400" min="0" step="50" />
+        </div>
+      </div>
+      <button class="btn-primary" onclick="calcularObjetivo()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Calcular mi precio mínimo
+      </button>
+    </div>
+
+    <div id="results-obj" style="display:none">
+      <div class="card">
+        <div class="card-title">Necesitas facturar</div>
+        <div class="neto-hero">
+          <div class="neto-label">💡 Facturación mínima mensual (sin IVA)</div>
+          <div class="neto-amount" id="obj-r-factura">—</div>
+          <div class="neto-sub" id="obj-r-sub">Para llevarte el neto que buscas</div>
+          <div class="neto-badges">
+            <span class="neto-badge b-hour" id="obj-r-hora">— €/hora</span>
+            <span class="neto-badge b-day" id="obj-r-dia">— €/día</span>
+          </div>
+        </div>
+        <div class="stats-grid" style="margin-top:1rem">
+          <div class="stat-card neg">
+            <div class="stat-label">Cuota SS</div>
+            <div class="stat-value" id="obj-r-ss">—</div>
+          </div>
+          <div class="stat-card neg">
+            <div class="stat-label">IRPF retenido</div>
+            <div class="stat-value" id="obj-r-irpf">—</div>
+          </div>
+          <div class="stat-card neg">
+            <div class="stat-label">Gastos</div>
+            <div class="stat-value" id="obj-r-gastos">—</div>
+          </div>
+        </div>
+        <div class="alert alert-info" style="margin-top:1rem">
+          <span class="alert-icon">💡</span>
+          <span class="alert-text">Este cálculo asume que <strong>toda tu facturación lleva retención IRPF</strong>. Si facturas a particulares, ajusta la retención a 0%.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══ INFO ═══════════════════════════════════ -->
+  <section class="info-section" aria-label="Guía sobre cotización de autónomos en España 2025">
+    <h2>Guía completa para autónomos en España</h2>
+
+    <p>Esta calculadora te ayuda a entender cuánto dinero te quedas realmente al final de cada mes, teniendo en cuenta los tres grandes "agujeros" de tu facturación: la <strong>cuota a la Seguridad Social</strong>, la <strong>retención de IRPF</strong> y tus <strong>gastos deducibles</strong>.</p>
+
+    <h3>Sistema de cotización por ingresos reales (2025)</h3>
+    <p>Desde 2023 los autónomos cotizan según sus <strong>rendimientos netos estimados</strong>. Si al final del año tus ingresos reales difieren del tramo que elegiste, la Seguridad Social regularizará la diferencia en una liquidación anual.</p>
+
+    <table class="tramos-table" aria-label="Tabla de tramos de cotización autónomos 2025">
+      <thead><tr><th>Rendimiento neto mensual</th><th>Cuota 2025</th></tr></thead>
+      <tbody>
+        <tr><td>Hasta 670 €</td><td>200 €/mes</td></tr>
+        <tr><td>670 – 900 €</td><td>220 €/mes</td></tr>
+        <tr><td>900 – 1.166,70 €</td><td>260 €/mes</td></tr>
+        <tr><td>1.166,70 – 1.300 €</td><td>310 €/mes</td></tr>
+        <tr><td>1.300 – 1.500 €</td><td>370 €/mes</td></tr>
+        <tr><td>1.500 – 1.700 €</td><td>420 €/mes</td></tr>
+        <tr><td>1.700 – 1.850 €</td><td>470 €/mes</td></tr>
+        <tr><td>1.850 – 2.030 €</td><td>530 €/mes</td></tr>
+        <tr><td>2.030 – 2.330 €</td><td>590 €/mes</td></tr>
+        <tr><td>2.330 – 2.760 €</td><td>650 €/mes</td></tr>
+        <tr><td>2.760 – 3.190 €</td><td>720 €/mes</td></tr>
+        <tr><td>3.190 – 3.620 €</td><td>850 €/mes</td></tr>
+        <tr><td>3.620 – 4.050 €</td><td>950 €/mes</td></tr>
+        <tr><td>Más de 6.000 €</td><td>1.100 €/mes (máx.)</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Tarifa plana para nuevos autónomos</h3>
+    <p>Si te das de alta por primera vez (o no eras autónomo en los últimos 2 años), tienes derecho a la <strong>tarifa plana de 80 €/mes durante 12 meses</strong>. La calculadora muestra el ahorro total que supone frente a tu tramo normal.</p>
+
+    <h3>Retención de IRPF en facturas</h3>
+    <p>El tipo general es el <strong>15%</strong>. En tu primer año y los dos siguientes puedes aplicar el <strong>7%</strong>. Si solo facturas a particulares, no hay retención y deberás pagar el IRPF tú directamente mediante el modelo 130 cada trimestre (20% del rendimiento neto acumulado).</p>
+
+    <h3>IVA: lo cobras, pero no es tuyo</h3>
+    <p>El IVA que repercutes en tus facturas no es ingreso. Lo ingresas en Hacienda trimestralmente mediante el <strong>modelo 303</strong>, pudiendo deducir el IVA soportado en tus gastos profesionales.</p>
+
+    <h3>Gastos deducibles más habituales</h3>
+    <ul>
+      <li>Cuota de autónomos (la propia que calculamos aquí)</li>
+      <li>Gestoría, asesoría y servicios profesionales</li>
+      <li>Alquiler de local u oficina; suministros proporcionales si trabajas desde casa</li>
+      <li>Material informático, software y suscripciones profesionales</li>
+      <li>Formación y cursos relacionados con tu actividad</li>
+      <li>Seguros de responsabilidad civil y de salud (hasta 500 €/año)</li>
+      <li>Dietas y manutención (con límites: 26,67 €/día en España, 48,08 € en el extranjero)</li>
+      <li>Vehículo: solo si es de uso exclusivo profesional y está debidamente justificado</li>
+    </ul>
+
+    <div class="disclaimer">
+      <strong>⚠️ Aviso legal:</strong> Esta calculadora tiene carácter <strong>exclusivamente orientativo</strong>. Los resultados no constituyen asesoramiento fiscal ni laboral. Las cifras reales dependen de tu situación personal, comunidad autónoma, deducciones aplicables y cambios normativos posteriores. Consulta siempre con un <strong>gestor o asesor fiscal</strong>. Datos basados en la normativa vigente a enero de 2025.
+    </div>
+  </section>
+
+  <footer>
+    <p>Calculadora Autónomos España 2025 · Herramienta gratuita con fines informativos</p>
+    <p style="margin-top:.3rem">HTML + CSS + JS puro · Sin cookies · Sin rastreo · Datos guardados localmente en tu navegador</p>
+  </footer>
+</div>
+
+<!-- ══════════════════════════════════════════════
+     JAVASCRIPT
+══════════════════════════════════════════════ -->
+<script>
+'use strict';
+
+/* ─── CONSTANTES ──────────────────────────────────────────── */
+const SMI_MENSUAL = 1134; // SMI 2025 (14 pagas / 12)
+const TRAMOS_SS = [
+  { max: 670,    cuota: 200 },
+  { max: 900,    cuota: 220 },
+  { max: 1167,   cuota: 260 },
+  { max: 1300,   cuota: 310 },
+  { max: 1500,   cuota: 370 },
+  { max: 1700,   cuota: 420 },
+  { max: 1850,   cuota: 470 },
+  { max: 2030,   cuota: 530 },
+  { max: 2330,   cuota: 590 },
+  { max: 2760,   cuota: 650 },
+  { max: 3190,   cuota: 720 },
+  { max: 3620,   cuota: 850 },
+  { max: 4050,   cuota: 950 },
+  { max: Infinity, cuota: 1100 },
+];
+const TRAMOS_IRPF = [
+  { hasta: 12450,    tipo: 0.19 },
+  { hasta: 20200,    tipo: 0.24 },
+  { hasta: 35200,    tipo: 0.30 },
+  { hasta: 60000,    tipo: 0.37 },
+  { hasta: 300000,   tipo: 0.45 },
+  { hasta: Infinity, tipo: 0.47 },
+];
+
+/* ─── FORMATO ─────────────────────────────────────────────── */
+const fmt  = n => n.toLocaleString('es-ES', { style:'currency', currency:'EUR', minimumFractionDigits: 2 });
+const fmtR = n => Math.round(n).toLocaleString('es-ES', { style:'currency', currency:'EUR', minimumFractionDigits: 0, maximumFractionDigits: 0 });
+
+function setText(id, val) {
+  const el = document.getElementById(id);
+  if (el) el.textContent = val;
+}
+
+/* ─── PERIODO (mensual/anual) ─────────────────────────────── */
+let periodo = 'mes';
+let mult = 1;
+function setPeriod(p) {
+  periodo = p; mult = p === 'anual' ? 12 : 1;
+  document.querySelectorAll('.period-btn').forEach(b => b.classList.toggle('active', b.dataset.period === p));
+  if (window._lastCalc) renderResults(window._lastCalc);
+}
+
+/* ─── TEMA ────────────────────────────────────────────────── */
+function toggleTheme() {
+  const curr = document.documentElement.getAttribute('data-theme');
+  const next = curr === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', next === 'dark' ? '' : 'light');
+  localStorage.setItem('theme', next);
+  const icon = document.getElementById('icon-theme');
+  icon.innerHTML = next === 'light'
+    ? '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>'
+    : '<circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>';
+}
+(function initTheme() {
+  const saved = localStorage.getItem('theme') || 'dark';
+  if (saved === 'light') {
+    document.documentElement.setAttribute('data-theme', 'light');
+    const icon = document.getElementById('icon-theme');
+    icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+  }
+})();
+
+/* ─── MODO TABS ───────────────────────────────────────────── */
+function setModo(modo) {
+  ['calcular','objetivo'].forEach(m => {
+    document.getElementById('panel-'+m).classList.toggle('active', m === modo);
+    document.querySelectorAll('.modo-tab')[m === 'calcular' ? 0 : 1].classList.toggle('active', m === modo);
+    document.querySelectorAll('.modo-tab')[m === 'calcular' ? 0 : 1].setAttribute('aria-selected', m === modo);
+  });
+}
+
+/* ─── IRPF RENTA ──────────────────────────────────────────── */
+function calcIrpfRenta(baseAnual) {
+  let ant = 0, cuota = 0;
+  for (const t of TRAMOS_IRPF) {
+    if (baseAnual <= ant) break;
+    cuota += (Math.min(baseAnual, t.hasta) - ant) * t.tipo;
+    ant = t.hasta;
+  }
+  return cuota;
+}
+
+/* ─── SUGERENCIA AUTOMÁTICA DE TRAMO ─────────────────────── */
+function sugerirTramo(rendimientoNeto) {
+  const tramo = TRAMOS_SS.find(t => rendimientoNeto <= t.max);
+  if (!tramo) return null;
+  return tramo.cuota;
+}
+
+function updateTramoSuggestion() {
+  const ingresos = parseFloat(document.getElementById('ingresos').value) || 0;
+  const gastos   = parseFloat(document.getElementById('gastos').value) || 0;
+  const tramoSS  = parseFloat(document.getElementById('tramo').value) || 310;
+  if (!ingresos) { document.getElementById('tramo-suggestion').style.display = 'none'; return; }
+  const rendNeto = ingresos - gastos - tramoSS;
+  const cuotaSugerida = sugerirTramo(Math.max(0, rendNeto));
+  const sg = document.getElementById('tramo-suggestion');
+  const st = document.getElementById('tramo-suggestion-text');
+  if (cuotaSugerida && cuotaSugerida !== tramoSS) {
+    sg.style.display = 'flex';
+    st.textContent = `Tu rendimiento sugiere el tramo de ${cuotaSugerida} €/mes → actualízalo si es necesario`;
+    // Auto-update select
+    const sel = document.getElementById('tramo');
+    const opt = [...sel.options].find(o => parseInt(o.value) === cuotaSugerida);
+    if (opt) sel.value = cuotaSugerida;
+    sg.style.display = 'none'; // hide after auto-update
+  } else {
+    sg.style.display = 'none';
+  }
+}
+
+/* ─── VALIDACIONES ────────────────────────────────────────── */
+function clearErrors() {
+  document.querySelectorAll('input.is-error').forEach(el => el.classList.remove('is-error'));
+  document.querySelectorAll('.err-msg').forEach(el => el.textContent = '');
+}
+function showError(id, msg) {
+  const inp = document.getElementById(id);
+  const err = document.getElementById('err-' + id);
+  if (inp) inp.classList.add('is-error');
+  if (err) err.textContent = msg;
+}
+
+/* ─── PRESETS ─────────────────────────────────────────────── */
+const PRESETS = {
+  junior:  { ingresos: 1200, gastos: 200, irpf: 7,  iva: 21, tramo: 260, horas: 140 },
+  mid:     { ingresos: 2500, gastos: 400, irpf: 15, iva: 21, tramo: 530, horas: 120 },
+  senior:  { ingresos: 4500, gastos: 700, irpf: 15, iva: 21, tramo: 950, horas: 100 },
+  nuevo:   { ingresos: 1500, gastos: 250, irpf: 7,  iva: 21, tramo: 200, horas: 130, tarifaPlana: true },
+};
+function applyPreset(key) {
+  const p = PRESETS[key];
+  if (!p) return;
+  setInput('ingresos', p.ingresos);
+  setInput('gastos',   p.gastos);
+  setInput('irpf',     p.irpf);
+  setInput('horas',    p.horas);
+  document.getElementById('iva').value   = p.iva;
+  document.getElementById('tramo').value = p.tramo;
+  document.getElementById('tarifaPlana').checked = !!p.tarifaPlana;
+  onTarifaPlanaChange();
+  saveToStorage();
+  calcular();
+}
+
+function setInput(id, val) {
+  const inp = document.getElementById(id);
+  if (!inp) return;
+  inp.value = val;
+  // sync slider
+  const sl = document.getElementById('slider-' + id);
+  const sv = document.getElementById('slval-' + id);
+  if (sl) sl.value = val;
+  if (sv) sv.textContent = val.toLocaleString('es-ES') + ' €';
+}
+
+/* ─── CÁLCULO PRINCIPAL ───────────────────────────────────── */
+function calcular() {
+  clearErrors();
+  let valid = true;
+
+  const ingresos  = parseFloat(document.getElementById('ingresos').value);
+  const gastos    = parseFloat(document.getElementById('gastos').value) || 0;
+  const irpfPct   = parseFloat(document.getElementById('irpf').value);
+  const ivaPct    = parseFloat(document.getElementById('iva').value);
+  const horas     = parseFloat(document.getElementById('horas').value) || 120;
+  const tPlana    = document.getElementById('tarifaPlana').checked;
+  const empleados = document.getElementById('empleados').checked;
+  const soloPartic= document.getElementById('soloParticulares').checked;
+  let   cuotaSS   = parseFloat(document.getElementById('tramo').value);
+
+  if (!ingresos || isNaN(ingresos) || ingresos <= 0) {
+    showError('ingresos', 'Introduce un importe válido mayor que 0.');
+    valid = false;
+  }
+  if (isNaN(gastos) || gastos < 0) {
+    showError('gastos', 'No puede ser negativo.');
+    valid = false;
+  }
+  if (isNaN(irpfPct) || irpfPct < 0 || irpfPct > 48) {
+    showError('irpf', 'Debe estar entre 0% y 48%.');
+    valid = false;
+  }
+  if (!valid) return;
+
+  // Tarifa plana
+  const cuotaOriginal = cuotaSS;
+  if (tPlana) cuotaSS = 80;
+
+  // Cotización empleados (+1.2% sobre base de cotización aprox)
+  const extraEmpleados = empleados ? cuotaSS * 0.012 : 0;
+  cuotaSS += extraEmpleados;
+
+  // IRPF en factura: si solo factura a particulares → 0 retenido (pero pagarán modelo 130)
+  const irpfRetenido = soloPartic ? 0 : ingresos * (irpfPct / 100);
+
+  const ivaRepercutido = ingresos * (ivaPct / 100);
+  const baseImponible  = Math.max(0, ingresos - gastos - cuotaSS);
+  const baseAnual      = baseImponible * 12;
+  const irpfRentaAnual = calcIrpfRenta(baseAnual);
+
+  // Modelo 130: 20% rendimiento neto acumulado si facturas a particulares
+  const irpf130Trim = soloPartic ? Math.max(0, (ingresos - gastos - cuotaSS) * 3 * 0.20) : 0;
+
+  // Neto real
+  const neto = ingresos - cuotaSS - gastos - irpfRetenido;
+  const netoHora = neto / horas;
+  const dias     = horas / (horas <= 80 ? 4 : 5);  // dias laborables aprox
+  const netoDia  = neto / Math.max(1, dias);
+  const eficiencia = ingresos > 0 ? (Math.max(0, neto) / ingresos * 100) : 0;
+
+  // Ahorro tarifa plana
+  const ahorro12 = tPlana ? (cuotaOriginal - 80) * 12 : 0;
+
+  // Cálculo inverso: ¿cuánto facturar para este neto?
+  // neto = ingr - SS - gastos - ingr*irpfPct/100
+  // neto = ingr*(1 - irpfPct/100) - SS - gastos
+  // ingr = (neto + SS + gastos) / (1 - irpfPct/100)
+  const divisor = soloPartic ? 1 : (1 - irpfPct / 100);
+  const facturaMinima = divisor > 0 ? (Math.max(0, neto) + cuotaSS + gastos) / divisor : 0;
+  const horaMinima = facturaMinima / horas;
+
+  const data = {
+    ingresos, gastos, cuotaSS, cuotaOriginal, irpfRetenido, ivaRepercutido,
+    baseImponible, irpfRentaAnual, neto: Math.max(0, neto), netoHora,
+    netoDia, eficiencia, horas, tPlana, ahorro12, irpfPct, ivaPct,
+    facturaMinima, horaMinima, soloPartic, irpf130Trim, dias: Math.max(1, dias),
+  };
+  window._lastCalc = data;
+  saveToStorage();
+  renderResults(data);
+  document.getElementById('results').classList.add('visible');
+  document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+/* ─── RENDER ──────────────────────────────────────────────── */
+function renderResults(d) {
+  const m = mult; // 1 o 12
+
+  // Periodo label
+  setText('r-period-label', m === 1 ? '💰 Neto real que te llevas al mes' : '💰 Neto real anual (12 meses)');
+  setText('r-neto', fmt(d.neto * m));
+  setText('r-neto-sub', m === 1
+    ? `Después de cuota SS (${fmt(d.cuotaSS)}), IRPF retenido y gastos`
+    : `${fmt(d.neto)} × 12 meses`
+  );
+
+  // Badges
+  setText('r-badge-hora', `${fmt(d.netoHora)}/h`);
+  setText('r-badge-dia',  `${fmt(d.netoDia)}/día`);
+  setText('r-badge-eff',  `Eficiencia ${d.eficiencia.toFixed(0)}%`);
+
+  // Stats
+  setText('r-cuota',      fmt(d.cuotaSS * m));
+  setText('r-cuota-note', d.tPlana ? '🎉 Tarifa plana activa' : 'Tramo seleccionado');
+  setText('r-irpf',       d.irpfRetenido > 0 ? fmt(d.irpfRetenido * m) : '0,00 €');
+  setText('r-gastos',     fmt(d.gastos * m));
+  setText('r-iva',        fmt(d.ivaRepercutido * m));
+  setText('r-base',       fmt(d.baseImponible * m));
+  setText('r-irpf-renta', fmt(d.irpfRentaAnual * (m === 1 ? 1 : 1))); // siempre anual
+
+  // Trimestrales
+  setText('r-iva-trim',  fmt(d.ivaRepercutido * 3));
+  setText('r-irpf-trim', d.soloPartic ? fmt(d.irpf130Trim) : fmt(d.irpfRetenido * 3));
+  setText('r-ss-trim',   fmt(d.cuotaSS * 3));
+
+  // Inverso
+  setText('r-inversa-neto',  fmt(d.neto));
+  setText('r-inversa-bruto', fmt(d.facturaMinima));
+  setText('r-inversa-hora',  fmt(d.horaMinima) + '/h');
+
+  // Ahorro tarifa plana
+  const savingsBox = document.getElementById('savings-tp');
+  if (d.tPlana && d.ahorro12 > 0) {
+    savingsBox.style.display = 'block';
+    setText('savings-amount', `Ahorro: ${fmt(d.ahorro12)}`);
+  } else {
+    savingsBox.style.display = 'none';
+  }
+
+  // Alertas
+  const alertBajo = document.getElementById('alert-bajo');
+  const alertPerd = document.getElementById('alert-perdidas');
+  alertBajo.innerHTML = '';
+  alertPerd.innerHTML = '';
+
+  if (d.neto < 0) {
+    alertPerd.innerHTML = `<div class="alert alert-warn" style="margin-bottom:.75rem"><span class="alert-icon">🔴</span><span class="alert-text"><strong>Resultado negativo.</strong> Con estos datos, tus gastos y cargas fiscales superan tus ingresos. Revisa tus tarifas o gastos.</span></div>`;
+  } else if (d.neto < SMI_MENSUAL) {
+    alertBajo.innerHTML = `<div class="alert alert-warn" style="margin-bottom:.75rem"><span class="alert-icon">⚠️</span><span class="alert-text">Tu neto mensual (<strong>${fmt(d.neto)}</strong>) está por debajo del SMI 2025 (<strong>${fmt(SMI_MENSUAL)}</strong>). Considera ajustar tus tarifas.</span></div>`;
+  } else if (d.neto >= 3000) {
+    alertBajo.innerHTML = `<div class="alert alert-success" style="margin-bottom:.75rem"><span class="alert-icon">✅</span><span class="alert-text">Excelente neto mensual. Recuerda destinar parte al ahorro y a la declaración de la Renta.</span></div>`;
+  }
+
+  if (d.soloPartic) {
+    document.getElementById('alert-ctx').innerHTML = `<div class="alert alert-info"><span class="alert-icon">ℹ️</span><span class="alert-text">Al facturar a particulares, no aplicas retención en factura. Deberás pagar el IRPF tú mismo mediante el <strong>modelo 130</strong> cada trimestre (~${fmt(d.irpf130Trim)} trimestral estimado).</span></div>`;
+  } else {
+    document.getElementById('alert-ctx').innerHTML = '';
+  }
+
+  // Donut chart
+  renderDonut(d);
+
+  // Barras
+  renderBars(d);
+}
+
+/* ─── DONUT ───────────────────────────────────────────────── */
+function renderDonut(d) {
+  const total = d.ingresos;
+  if (!total) return;
+  const pNeto  = Math.max(0, d.neto)          / total * 100;
+  const pSS    = d.cuotaSS                    / total * 100;
+  const pIRPF  = d.irpfRetenido               / total * 100;
+  const pGasto = d.gastos                     / total * 100;
+
+  const circumference = 100; // usamos %
+  let offset = 0;
+
+  function setArc(id, pct, off) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.setAttribute('stroke-dasharray', `${pct.toFixed(2)} ${(100-pct).toFixed(2)}`);
+    el.setAttribute('stroke-dashoffset', (-off).toFixed(2));
+  }
+
+  setArc('donut-neto',   pNeto,  offset); offset += pNeto;
+  setArc('donut-ss',     pSS,    offset); offset += pSS;
+  setArc('donut-irpf',   pIRPF,  offset); offset += pIRPF;
+  setArc('donut-gastos', pGasto, offset);
+
+  setText('donut-center-pct', pNeto.toFixed(0) + '%');
+}
+
+/* ─── BARRAS ──────────────────────────────────────────────── */
+function renderBars(d) {
+  const total = d.ingresos || 1;
+  const items = [
+    { label: 'Neto real',       val: Math.max(0, d.neto), color: 'var(--accent)' },
+    { label: 'Cuota SS',        val: d.cuotaSS,           color: 'var(--red)'    },
+    { label: 'IRPF retenido',   val: d.irpfRetenido,      color: 'var(--orange)' },
+    { label: 'Gastos deducibles', val: d.gastos,          color: 'var(--blue)'   },
+  ];
+  document.getElementById('bars-desglose').innerHTML = items.map(it => {
+    const pct = Math.min(100, (it.val / total) * 100);
+    return `<div class="bar-row">
+      <div class="bar-dot" style="background:${it.color}"></div>
+      <span class="bar-label">${it.label}</span>
+      <span class="bar-label-amount">${fmt(it.val)}</span>
+      <div class="bar-track"><div class="bar-fill" style="width:${pct.toFixed(1)}%;background:${it.color}"></div></div>
+      <span class="bar-pct">${pct.toFixed(0)}%</span>
+    </div>`;
+  }).join('');
+}
+
+/* ─── CÁLCULO OBJETIVO ────────────────────────────────────── */
+function calcularObjetivo() {
+  const netoObj  = parseFloat(document.getElementById('obj-neto').value);
+  const horas    = parseFloat(document.getElementById('obj-horas').value) || 120;
+  const irpfPct  = parseFloat(document.getElementById('obj-irpf').value) || 15;
+  const cuotaSS  = parseFloat(document.getElementById('obj-tramo').value) || 310;
+  const gastos   = parseFloat(document.getElementById('obj-gastos').value) || 0;
+
+  if (!netoObj || isNaN(netoObj) || netoObj <= 0) return;
+
+  // ingr = (netoObj + cuotaSS + gastos) / (1 - irpfPct/100)
+  const div = 1 - irpfPct / 100;
+  const factura = div > 0 ? (netoObj + cuotaSS + gastos) / div : netoObj + cuotaSS + gastos;
+  const horaMin = factura / horas;
+  const diaMin  = factura / (horas / 5);
+  const irpfRet = factura * (irpfPct / 100);
+
+  setText('obj-r-factura', fmt(factura));
+  setText('obj-r-sub',     `Para llevarte ${fmt(netoObj)} netos al mes`);
+  setText('obj-r-hora',    fmt(horaMin) + '/hora');
+  setText('obj-r-dia',     fmt(diaMin) + '/día laboral');
+  setText('obj-r-ss',      fmt(cuotaSS));
+  setText('obj-r-irpf',    fmt(irpfRet));
+  setText('obj-r-gastos',  fmt(gastos));
+
+  document.getElementById('results-obj').style.display = 'block';
+  document.getElementById('results-obj').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+/* ─── COPIAR RESULTADOS ───────────────────────────────────── */
+function copiarResultados() {
+  const d = window._lastCalc;
+  if (!d) return;
+  const texto = [
+    '════════════════════════════════════',
+    '   CALCULADORA AUTÓNOMOS ESPAÑA 2025',
+    '════════════════════════════════════',
+    '',
+    `FACTURACIÓN MENSUAL`,
+    `  Ingresos brutos (sin IVA):     ${fmt(d.ingresos)}`,
+    `  IVA repercutido (${d.ivaPct}%):       ${fmt(d.ivaRepercutido)}`,
+    `  Total facturado con IVA:       ${fmt(d.ingresos + d.ivaRepercutido)}`,
+    '',
+    `DEDUCCIONES`,
+    `  Cuota Seguridad Social:       -${fmt(d.cuotaSS)}${d.tPlana ? ' (tarifa plana)' : ''}`,
+    `  Retención IRPF (${d.irpfPct}%):        -${fmt(d.irpfRetenido)}`,
+    `  Gastos deducibles:            -${fmt(d.gastos)}`,
+    '',
+    `RESULTADO`,
+    `  Rendimiento neto mensual:      ${fmt(d.baseImponible)}`,
+    `  IRPF estimado anual (Renta):   ${fmt(d.irpfRentaAnual)}`,
+    `  ✅ NETO REAL MENSUAL:          ${fmt(d.neto)}`,
+    `  ⚡ Neto por hora:              ${fmt(d.netoHora)}/h (${d.horas}h/mes)`,
+    `  📊 Eficiencia fiscal:          ${d.eficiencia.toFixed(1)}%`,
+    '',
+    `OBLIGACIONES TRIMESTRALES`,
+    `  Modelo 303 (IVA):              ${fmt(d.ivaRepercutido * 3)}`,
+    `  Cuota SS (3 meses):            ${fmt(d.cuotaSS * 3)}`,
+    d.ahorro12 > 0 ? `  💰 Ahorro tarifa plana (12m):   ${fmt(d.ahorro12)}` : '',
+    '',
+    'Calculado en calculadora-autonomos.es',
+  ].filter(l => l !== '').join('\n');
+
+  const copy = (txt) => navigator.clipboard.writeText(txt);
+  const fallback = (txt) => {
+    const ta = document.createElement('textarea');
+    ta.value = txt; ta.style.position = 'fixed'; ta.style.opacity = '0';
+    document.body.appendChild(ta); ta.select();
+    try { document.execCommand('copy'); } finally { document.body.removeChild(ta); }
+  };
+
+  (navigator.clipboard ? copy(texto) : Promise.reject())
+    .catch(() => { try { fallback(texto); } catch(e) { alert('No se pudo copiar. Selecciona el texto manualmente.'); return; } })
+    .finally ? null : null;
+
+  const btn = document.getElementById('btnCopy');
+  btn.classList.add('success');
+  btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg> ¡Copiado!`;
+  setTimeout(() => {
+    btn.classList.remove('success');
+    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"/></svg> Copiar resultados`;
+  }, 2500);
+}
+
+/* ─── RESET ───────────────────────────────────────────────── */
+function resetForm() {
+  ['ingresos','gastos','irpf'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = id === 'irpf' ? '15' : '';
+  });
+  document.getElementById('horas').value = '120';
+  document.getElementById('iva').value   = '21';
+  document.getElementById('tramo').value = '310';
+  document.getElementById('tarifaPlana').checked    = false;
+  document.getElementById('empleados').checked      = false;
+  document.getElementById('soloParticulares').checked = false;
+  onTarifaPlanaChange();
+  ['slider-ingresos','slider-gastos'].forEach(id => {
+    const sl = document.getElementById(id);
+    if (sl) { sl.value = 0; }
+  });
+  ['slval-ingresos','slval-gastos'].forEach(id => setText(id, '0 €'));
+  document.getElementById('results').classList.remove('visible');
+  document.getElementById('alert-ctx').innerHTML = '';
+  document.getElementById('tramo-suggestion').style.display = 'none';
+  clearErrors();
+  localStorage.removeItem('calc-state');
+  window._lastCalc = null;
+}
+
+/* ─── TOGGLE TARIFA PLANA ─────────────────────────────────── */
+function onTarifaPlanaChange() {
+  const sel = document.getElementById('tramo');
+  const tPlana = document.getElementById('tarifaPlana').checked;
+  sel.classList.toggle('disabled', tPlana);
+  sel.disabled = tPlana;
+  if (window._lastCalc) calcular();
+}
+document.getElementById('tarifaPlana').addEventListener('change', onTarifaPlanaChange);
+
+/* ─── SOLO PARTICULARES ───────────────────────────────────── */
+document.getElementById('soloParticulares').addEventListener('change', function() {
+  const irpfField = document.getElementById('irpf');
+  if (this.checked) {
+    irpfField.value = 0;
+    irpfField.classList.add('disabled');
+    irpfField.disabled = true;
+  } else {
+    irpfField.value = 15;
+    irpfField.classList.remove('disabled');
+    irpfField.disabled = false;
+  }
+  if (window._lastCalc) calcular();
+});
+
+/* ─── EMPLEADOS ───────────────────────────────────────────── */
+document.getElementById('empleados').addEventListener('change', () => {
+  if (window._lastCalc) calcular();
+});
+
+/* ─── SLIDERS ─────────────────────────────────────────────── */
+function bindSlider(inputId, sliderId, valId) {
+  const inp = document.getElementById(inputId);
+  const sl  = document.getElementById(sliderId);
+  const sv  = document.getElementById(valId);
+  if (!inp || !sl) return;
+
+  const syncSlider = () => {
+    const v = parseFloat(inp.value) || 0;
+    sl.value = Math.min(v, parseFloat(sl.max));
+    if (sv) sv.textContent = v.toLocaleString('es-ES') + ' €';
+    updateTramoSuggestion();
+    debouncedCalc();
+  };
+  const syncInput = () => {
+    inp.value = sl.value;
+    if (sv) sv.textContent = parseFloat(sl.value).toLocaleString('es-ES') + ' €';
+    updateTramoSuggestion();
+    debouncedCalc();
+  };
+  inp.addEventListener('input', syncSlider);
+  sl.addEventListener('input', syncInput);
+}
+bindSlider('ingresos', 'slider-ingresos', 'slval-ingresos');
+bindSlider('gastos',   'slider-gastos',   'slval-gastos');
+
+/* ─── DEBOUNCE PARA CÁLCULO EN TIEMPO REAL ───────────────── */
+let debTimer;
+function debouncedCalc() {
+  clearTimeout(debTimer);
+  debTimer = setTimeout(() => {
+    if (document.getElementById('ingresos').value) calcular();
+  }, 320);
+}
+
+// Escucha cambios en todos los inputs para recalcular automáticamente
+['irpf','iva','tramo','horas'].forEach(id => {
+  const el = document.getElementById(id);
+  if (el) el.addEventListener('change', debouncedCalc);
+});
+document.getElementById('ingresos').addEventListener('input', debouncedCalc);
+document.getElementById('gastos').addEventListener('input', debouncedCalc);
+document.getElementById('irpf').addEventListener('input', debouncedCalc);
+
+/* ─── ENTER ───────────────────────────────────────────────── */
+document.addEventListener('keydown', e => { if (e.key === 'Enter' && e.target.tagName !== 'BUTTON') calcular(); });
+
+/* ─── PERSISTENCIA LOCAL ──────────────────────────────────── */
+function saveToStorage() {
+  try {
+    const state = {
+      ingresos: document.getElementById('ingresos').value,
+      gastos:   document.getElementById('gastos').value,
+      irpf:     document.getElementById('irpf').value,
+      iva:      document.getElementById('iva').value,
+      tramo:    document.getElementById('tramo').value,
+      horas:    document.getElementById('horas').value,
+      tPlana:   document.getElementById('tarifaPlana').checked,
+      empleados: document.getElementById('empleados').checked,
+      soloPartic: document.getElementById('soloParticulares').checked,
+    };
+    localStorage.setItem('calc-state', JSON.stringify(state));
+  } catch(e) { /* sin localStorage, ignoramos */ }
+}
+
+function loadFromStorage() {
+  try {
+    const raw = localStorage.getItem('calc-state');
+    if (!raw) return;
+    const s = JSON.parse(raw);
+    if (s.ingresos) setInput('ingresos', s.ingresos);
+    if (s.gastos)   setInput('gastos',   s.gastos);
+    if (s.irpf !== undefined) document.getElementById('irpf').value  = s.irpf;
+    if (s.iva   !== undefined) document.getElementById('iva').value   = s.iva;
+    if (s.tramo !== undefined) document.getElementById('tramo').value = s.tramo;
+    if (s.horas !== undefined) document.getElementById('horas').value = s.horas;
+    document.getElementById('tarifaPlana').checked        = !!s.tPlana;
+    document.getElementById('empleados').checked          = !!s.empleados;
+    document.getElementById('soloParticulares').checked   = !!s.soloPartic;
+    onTarifaPlanaChange();
+    if (s.soloPartic) {
+      document.getElementById('irpf').disabled = true;
+      document.getElementById('irpf').classList.add('disabled');
+    }
+    if (s.ingresos) calcular();
+  } catch(e) { /* datos corruptos, ignoramos */ }
+}
+
+// Init
+loadFromStorage();
+</script>
+
+</body>
+</html>
